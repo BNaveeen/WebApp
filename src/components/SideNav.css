@@ -1,0 +1,77 @@
+.sidenav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 60px;
+  background-color: rgba(255, 255, 255, 0.555);
+  transition: width 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.sidenav.expanded {
+  width: 200px;
+}
+
+.toggle-btn {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.expanded .toggle-btn {
+  transform: rotate(180deg);
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  gap: 16px;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.icon {
+  min-width: 24px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:-4px; /* Add this to center the icon */
+}
+
+.expanded .icon {
+  margin-left: -4px; /* Reset margin when expanded */
+}
+
+.title {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.expanded .title {
+  opacity: 1;
+}
