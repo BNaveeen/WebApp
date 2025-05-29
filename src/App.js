@@ -20,6 +20,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <SideNav />
         <Routes>
